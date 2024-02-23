@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calc</title>
+
+    <style>
+      :root {
+        --spacer: 10;
+        --gray-color: darkcyan;
+        --white-color: hsl(0, 0%, 90%);
+        --margin: 100px auto;
+      }
+
+      h1 {
+        background-color: var(--gray-color);
+        padding: calc(var(--spacer) * 1rem - 9rem);
+        margin: var(--margin);
+        width: calc(50vw);
+        color: var(--white-color);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>heading</h1>
+    <p>paragraph 1</p>
+    <p>paragraph 2</p>
+  </body>
+</html>
