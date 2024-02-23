@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  /* margin: 0; */
+  /* padding: 0; */
+}
+
+:root {
+  font-size: 62.5%;
+  --primary-color: darkcyan;
+  --green-color: hsl(120, 100%, 20%);
+  --grayish-white-color: hsl(0, 0%, 90%);
+  --padding: 1rem;
+  --margin: 1rem;
+  --border-radius: 1rem;
+}
+body {
+  font-size: 1.6rem;
+}
+
+h1 {
+  --padding: 2rem;
+  background-color: var(--primary-color, green);
+  padding: var(--padding);
+  color: var(--grayish-white-color, rgb(142, 30, 30)); /*fall back color red*/
+  border-radius: var(--border-radius);
+}
+
+p {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  background-color: var(--green-color);
+  padding: var(--padding);
+  color: var(--grayish-white-color);
+  border-radius: calc(var(--border-radius) - 1rem + 50%);
+}
