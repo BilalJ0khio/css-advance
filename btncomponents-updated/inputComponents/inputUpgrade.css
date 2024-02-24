@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --width: 70vw;
+  --border: 1px solid gray;
+  --margin: 100px auto;
+  --padding: 1em;
+  --border-radius: 0.3em;
+}
+body {
+  font-size: 1.6rem;
+}
+
+section {
+  margin: var(--margin);
+  width: var(--width);
+  border: var(--border);
+  padding: 1rem;
+}
+
+.input {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  outline: none;
+  background: none;
+  /* border: 1px solid hsl(0, 0%, 60%); */
+  padding: calc(var(--padding) - 6px);
+  font-size: 1.6rem;
+  border-radius: var(--border-radius);
+  /* variables */
+  --border-hue: 0;
+  --border-saturation: 0%;
+  --border-lightness: 60%;
+  --opacity: 0.6;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: hsl(
+    var(--border-hue),
+    var(--border-saturation),
+    var(--border-lightness)
+  );
+}
+
+.input:hover,
+.input:focus {
+  border-color: hsl(
+    var(--border-hue),
+    var(--border-saturation),
+    calc(var(--border-lightness) - 10%)
+  );
+
+  box-shadow: 0 0 5px
+    hsla(
+      var(--border-hue),
+      var(--border-saturation),
+      calc(var(--border-lightness) - 20%),
+      var(--opacity)
+    );
+}
+
+.input.inp-green {
+  --border-hue: 120;
+  --border-saturation: 50%;
+  --border-lighness: 55%;
+}
+
+.input.inp-danger {
+  --border-hue: 9;
+  --border-saturation: 98%;
+  --border-lightness: 70%;
+
+  /* border-color: hsl(9, 98%, 70%); */
+}
+
+.input.inp-large {
+  font-size: 1.8rem;
+}
+
+.input.inp-small {
+  font-size: 1.2rem;
+}
+
+.input.inp-disabled {
+  background-color: hsla(0, 0%, 90%, 1);
+}
+
+.input.inp-disabled:hover,
+.input.inp-disabled:focus {
+  border: none;
+}
